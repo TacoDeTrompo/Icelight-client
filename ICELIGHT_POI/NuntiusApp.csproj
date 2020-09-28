@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4BF8505C-4141-4ED7-A1BD-5B781578C9D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ICELIGHT_POI</RootNamespace>
+    <AssemblyName>ICELIGHT_POI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\ESCUELA\Cliente\Cliente\bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\ESCUELA\Cliente\Cliente\bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\ESCUELA\Cliente\Cliente\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="NAudio, Version=1.8.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NAudio.1.8.4\lib\net35\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AudioStuff\AudioStuff.cs" />
+    <Compile Include="ChatUI.cs" />
+    <Compile Include="Classes\Conversation.cs" />
+    <Compile Include="Classes\ConversationUser.cs" />
+    <Compile Include="Classes\Messaged.cs" />
+    <Compile Include="ContactoUI.cs" />
+    <Compile Include="Conversacion.cs" />
+    <Compile Include="Correo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Correo.Designer.cs">
+      <DependentUpon>Correo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\InicioSesion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\InicioSesion.Designer.cs">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Log.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Log.Designer.cs">
+      <DependentUpon>Log.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Rangos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Rangos.Designer.cs">
+      <DependentUpon>Rangos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LLAMADA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LLAMADA.Designer.cs">
+      <DependentUpon>LLAMADA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mensaje.cs" />
+    <Compile Include="Mensajeria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mensajeria.Designer.cs">
+      <DependentUpon>Mensajeria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MensajeUI.cs" />
+    <Compile Include="Forms\Historia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Historia.Designer.cs">
+      <DependentUpon>Historia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Registro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\UserProfile.cs" />
+    <Compile Include="Usuario.cs" />
+    <EmbeddedResource Include="Correo.resx">
+      <DependentUpon>Correo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\InicioSesion.resx">
+      <DependentUpon>InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Log.resx">
+      <DependentUpon>Log.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Rangos.resx">
+      <DependentUpon>Rangos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LLAMADA.resx">
+      <DependentUpon>LLAMADA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mensajeria.resx">
+      <DependentUpon>Mensajeria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Historia.resx">
+      <DependentUpon>Historia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Texto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circulo_LOGIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Texto2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuracion Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\texto3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box Infor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box Mensa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Emoticon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clip Archivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clip3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icono Mensaje.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Perfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Telefono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consola.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Limite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\limite2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letra1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\letra2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat correo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seleccion de Configuracion Perfil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AUSENTE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CONECTADO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DESCONECTADO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\676bf0e9f3c16649cd7f426c6dcd755a-signo-de-usuario-plana-con-fondo-redondo-by-vexels.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 2Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoFont.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\047-scroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scroll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\archery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spellbook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Asset 2Seal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Message.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Noble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monarch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Villens.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Monarch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Noble1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Knight1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diploma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left-arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\020-manuscript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\040-quill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\008-theater.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VillensDesconectado.png" />
+    <None Include="Resources\VillensAusente.png" />
+    <None Include="Resources\shield.png" />
+    <None Include="Resources\shield %281%29.png" />
+    <None Include="Resources\axes.png" />
+    <Content Include="Resources\bell.wav" />
+    <None Include="Resources\excalibur.png" />
+    <None Include="Resources\helmet.png" />
+    <None Include="Resources\poison.png" />
+    <None Include="Resources\goblet.png" />
+    <None Include="Resources\jewelry.png" />
+    <None Include="Resources\flag.png" />
+    <None Include="Resources\caravel.png" />
+    <None Include="Resources\crown.png" />
+    <None Include="Resources\diploma1.png" />
+    <None Include="Resources\miniMonarch.png" />
+    <None Include="Resources\miniNoble.png" />
+    <None Include="Resources\miniKnight.png" />
+    <None Include="Resources\miniVillens.png" />
+    <None Include="Resources\KnightAusente.png" />
+    <None Include="Resources\KnightDesconectado.png" />
+    <None Include="Resources\NobleAusente.png" />
+    <None Include="Resources\MonarchDesconect.png" />
+    <None Include="Resources\NobleDesconectado.png" />
+    <None Include="Resources\MonarchAusente1.png" />
+    <Content Include="Resources\RedLine.png" />
+    <None Include="Resources\RedLine1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
